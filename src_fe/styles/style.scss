@@ -1,0 +1,11 @@
+@import "colors";
+
+.heading{
+  color: $textColor1;
+  p{
+    color:$primaryCTA;
+    span{
+      color: $alert;
+    }
+  }
+}
