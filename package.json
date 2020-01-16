@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src_fe/**/*.js\"",
     "eslint-fix": "eslint --fix \"src_fe/**/*.js\"",
+    "eslint-fix-be": "eslint --fix \"src_besrv/**/*.js\"",
     "build": "npm run clean && webpack  --mode=production --progress --profile --colors --display-error-details"
   },
   "proxy": "http://localhost:5000/",
