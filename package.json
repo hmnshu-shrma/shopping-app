@@ -7,10 +7,11 @@
     "clean": "rimraf dist",
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.js\"",
-    "eslint-fix": "eslint --fix \"src/**/*.js\"",
+    "format": "prettier --write \"src_fe/**/*.js\"",
+    "eslint-fix": "eslint --fix \"src_fe/**/*.js\"",
     "build": "npm run clean && webpack  --mode=production --progress --profile --colors --display-error-details"
   },
+  "proxy": "http://localhost:5000/",
   "keywords": [
     "react",
     "reactjs",
@@ -37,6 +38,7 @@
     "axios": "^0.19.1",
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
+    "express": "^4.17.1",
     "mini-css-extract-plugin": "^0.8.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "react": "^16.12.0",

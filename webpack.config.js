@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const rootDir = path.resolve(__dirname, '.')
-const srcDir = path.resolve(__dirname, '.', 'src')
+const srcDir = path.resolve(__dirname, '.', 'src_fe')
 const distDir = path.resolve(__dirname, '.', 'dist')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV !== 'production'
@@ -18,7 +18,7 @@ module.exports = () => {
   }, {})
   return {
     context: rootDir,
-    entry: './src/index.js',
+    entry: './src_fe/index.js',
     output: {
       path: distDir,
       publicPath: '/',
@@ -38,14 +38,14 @@ module.exports = () => {
     resolve: {
       extensions: ['*', '.js', '.jsx'],
       alias: {
-        Styles: path.resolve(__dirname, 'src/styles/'),
-        Assets: path.resolve(__dirname, 'src/assets/'),
-        Redux: path.resolve(__dirname, 'src/redux/'),
-        Views: path.resolve(__dirname, 'src/views/'),
-        Hoc: path.resolve(__dirname, 'src/hoc/'),
-        Routes: path.resolve(__dirname, 'src/routes/'),
-        FormConstants: path.resolve(__dirname, 'src/FormConstants/'),
-        Util: path.resolve(__dirname, 'src/util/')
+        Styles: path.resolve(__dirname, 'src_fe/styles/'),
+        Assets: path.resolve(__dirname, 'src_fe/assets/'),
+        Redux: path.resolve(__dirname, 'src_fe/redux/'),
+        Views: path.resolve(__dirname, 'src_fe/views/'),
+        Hoc: path.resolve(__dirname, 'src_fe/hoc/'),
+        Routes: path.resolve(__dirname, 'src_fe/routes/'),
+        FormConstants: path.resolve(__dirname, 'src_fe/FormConstants/'),
+        Util: path.resolve(__dirname, 'src_fe/util/')
       }
     },
     module: {
@@ -54,7 +54,7 @@ module.exports = () => {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: ['babel-loader', 'eslint-loader'], // include eslint-loader,
-          include: path.resolve(__dirname, './', 'src')
+          include: path.resolve(__dirname, './', 'src_fe')
         },
         {
           test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|otf|svg)(\?[a-z0-9=.]+)?$/,
@@ -93,7 +93,6 @@ module.exports = () => {
         name: true,
         cacheGroups: {
           default: false,
-          vendors: false,
           vendors: {
             chunks: 'all',
             test: /[\\/]node_modules[\\/]/,
