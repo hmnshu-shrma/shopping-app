@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
 
-
-
 app.get('/add-to-cart', function (req, res) {
   const addtocart = require(__dirname + '/src_besrv/server/addToCart/index.post.json')
   res.header("Content-Type",'application/json');
