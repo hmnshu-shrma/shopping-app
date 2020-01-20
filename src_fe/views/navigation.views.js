@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Cart from './cart.views'
 import Logo from 'Assets/images/logo.png'
 import '../styles/navigation.scss'
@@ -8,7 +9,19 @@ class Navigation extends React.Component {
       <React.Fragment>
         <nav>
           <div className='navigation'>
-            <img className='logo' src={Logo} alt='logo image' />
+            <div className='logo-container'>
+              <img className='logo-img' src={Logo} alt='logo image' />
+            </div>
+            <div className='navlinks-container'>
+              <ul className='links'>
+                <li>
+                    Home
+                </li>
+                <li>
+                    Products
+                </li>
+              </ul>
+            </div>
             <Cart />
           </div>
         </nav>
