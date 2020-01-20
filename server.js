@@ -1,30 +1,31 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
+const path = require('path')
 
-app.get('/add-to-cart', function (req, res) {
-  const addtocart = require(__dirname + '/src_besrv/server/addToCart/index.post.json')
-  res.header("Content-Type",'application/json');
+app.get('/add-to-cart', (req, res) => {
+  const addtocart = path.resolve(__dirname,'/src_besrv/server/addToCart/index.post.json')
+  res.header('Content-Type','application/json')
   res.status(200)
-  res.send(JSON.stringify(addtocart));
+  res.send(JSON.stringify(addtocart))
 })
-app.get('/banner-images', function (req, res) {
-  const banner  = require(__dirname + '/src_besrv/server/categories/index.get.json')
-  res.header("Content-Type",'application/json')
+app.get('/banner-images', (req, res) => {
+  const banner = path.resolve(__dirname, '/src_besrv/server/categories/index.get.json')
+  res.header('Content-Type','application/json')
   res.status(200)
   res.send(JSON.stringify(banner))
 })
-app.get('/categories', function (req, res) {
-  const categories  = require(__dirname + '/src_besrv/server/categories/index.get.json')
-  res.header("Content-Type",'application/json')
+app.get('/categories', (req, res) => {
+  const categories = path.resolve(__dirname, '/src_besrv/server/categories/index.get.json')
+  res.header('Content-Type','application/json')
   res.status(200)
-  res.send(JSON.stringify(categories));
+  res.send(JSON.stringify(categories))
 })
-app.get('/products', function (req, res) {
-  const products  = require(__dirname + '/src_besrv/server/products/index.get.json')
-   res.header("Content-Type",'application/json');
+app.get('/products',(req, res) => {
+  const products = path.resolve(__dirname, '/src_besrv/server/products/index.get.json')
+  res.header('Content-Type','application/json')
   res.status(200)
-  res.send(JSON.stringify(products));
+  res.send(JSON.stringify(products))
 })
 
 // console.log that your server is up and running

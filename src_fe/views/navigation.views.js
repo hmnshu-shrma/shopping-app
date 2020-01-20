@@ -15,14 +15,16 @@ class Navigation extends React.Component {
             <div className='navlinks-container'>
               <ul className='links'>
                 <li>
-                    Home
+                Home
                 </li>
                 <li>
-                    Products
+                Products
                 </li>
               </ul>
             </div>
-            <Cart />
+            <div className='cart-login-container'>
+              <Cart />
+            </div>
           </div>
         </nav>
       </React.Fragment>

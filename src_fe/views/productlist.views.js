@@ -4,7 +4,7 @@ class ProductList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>product list</p>
+        <p>product listing</p>
       </React.Fragment>
     )
   }
