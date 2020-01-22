@@ -3,9 +3,11 @@ import React from 'react'
 const LoginSignup = (props) => {
   return (
     <React.Fragment>
-      <div className='login-contaner'>
-        <p className='link signup'>Signup </p>
-        <p className='link login'>login</p>
+      <div className='login-container'>
+        <p className='link-block'>
+          <span className='link'>Signup</span>
+          <span className='link'>login</span>
+        </p>
       </div>
     </React.Fragment>
   )

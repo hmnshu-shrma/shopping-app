@@ -124,6 +124,7 @@ module.exports = () => {
       new MiniCssExtractPlugin({
         filename: '[hash].css'
       }),
+
       new webpack.DefinePlugin(envKeys)
     ],
     mode: devMode ? 'development' : 'production'

@@ -24,8 +24,8 @@ class Navigation extends React.Component {
                 </ul>
               </div>
               <div className='cart-login-container'>
-                <Cart />
                 <LoginSignup />
+                <Cart />
               </div>
             </div>
           </nav>
