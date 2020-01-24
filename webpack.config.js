@@ -44,7 +44,7 @@ module.exports = () => {
         Views: path.resolve(__dirname, 'src_fe/views/'),
         Hoc: path.resolve(__dirname, 'src_fe/hoc/'),
         Routes: path.resolve(__dirname, 'src_fe/routes/'),
-        FormConstants: path.resolve(__dirname, 'src_fe/FormConstants/'),
+        Constants: path.resolve(__dirname, 'constants'),
         Util: path.resolve(__dirname, 'src_fe/util/')
       }
     },

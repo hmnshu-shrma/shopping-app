@@ -9,7 +9,7 @@ class AppContainer extends Component {
       <React.Fragment>
         <Navigation />
         <Carousel />
-        <Banners />
+        <Banners props='himanshu' />
         <ProductList />
       </React.Fragment>
     )
