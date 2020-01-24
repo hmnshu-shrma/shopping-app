@@ -5,9 +5,10 @@ import Offer2 from 'Assets/images/offers/offer2.jpg'
 import Offer3 from 'Assets/images/offers/offer3.jpg'
 import Offer4 from 'Assets/images/offers/offer4.jpg'
 import Offer5 from 'Assets/images/offers/offer5.jpg'
-import 'owl.carousel'
-import OwlCarousel from 'react-owl-carousel'
-class Carousel extends React.Component {
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+
+class BannerCarousel extends React.Component {
   constructor(props){
     super(props)
     this.state={
@@ -20,25 +21,26 @@ class Carousel extends React.Component {
 	     ]
     }
   }
-  render(){
+  render() {
+    const {items} = this.state
+      return (
+        <React.Fragment>
+          <div className='carousel-container'>
+            <Carousel
+              showArrows={false}
+              showStatus={false}
+              showThumbs={false}
+              infiniteLoop
+              autoPlay
+            >
+              {items}
+            </Carousel>
+          </div>
 
-  const {items} = this.state
-    return (
-      <React.Fragment>
-        <div className='carousel-container'>
-          <p>Carousel</p>
-          <OwlCarousel
-            className='owl-theme'
-            loop
-            margin={10}
-            nav
-          >
-            {items}
-          </OwlCarousel>
-        </div>
-      </React.Fragment>
-    )
+
+        </React.Fragment>
+      )
   }
 }
 
-export default Carousel
+export default BannerCarousel
