@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "start": " npm run eslint-fix && webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src_fe/**/*.js\"",
     "eslint-fix": "eslint --fix \"src_fe/**/*.js\"",

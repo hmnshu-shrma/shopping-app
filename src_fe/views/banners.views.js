@@ -1,20 +1,22 @@
 import React from 'react'
-import BannersConst from 'Constants/'
+import BannersConst , { BannerImages} from 'Constants/'
 import { uuid } from 'uuidv4'
-import path from 'path'
+// import path from 'path'
 const Banners = (props) => {
-  console.error(BannersConst)
-  const listItems = BannersConst.map((number ,id) => {
-  const {
-    img_name: imageName,
-    imt_alt: imageAlt
+  const bannersComponent = BannersConst.map((number ,id) => {
+    const {
+      img_name: imageName,
+      imt_alt: imageAlt
     } = number
-        return (<img src={path.resolve(__dirname, `/srv_fe/assets/images/category/${imageName}.png`)} key={uuid()} alt={imageAlt} />)
+    return if ( BannerImages[id].name === imageName ){
+      <img src={BannerImages[id].image} key={uuid()} alt={imageAlt} className='banner-image' />
+    } else {
+      `no image found ${id}`
     }
-  )
+  })
   return (
     <React.Fragment>
-      {listItems}
+      {bannersComponent}
     </React.Fragment>
   )
 }

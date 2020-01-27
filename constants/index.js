@@ -1,14 +1,20 @@
-import baby from '../src_fe/assets/images/category/baby.png'
-import bakery from '../src_fe/assets/images/category/bakery.png'
-export default {
-   baby, bakery
- }
-
+import Baby from 'Assets/images/category/baby.png'
+import Bakery from 'Assets/images/category/bakery.png'
+import Beauty from 'Assets/images/category/beauty.png'
+import Beverages from 'Assets/images/category/beverages.png'
+import Fruits from 'Assets/images/category/fruits.png'
+const BannerImages =  [
+  {name:'fruits', image:Fruits},
+  {name:'bakery', image:Bakery},
+  {name:'beverages', image: Beverages},
+  {name:'beauty', image:Beauty},
+  {name :'baby', image :Baby},
+]
 
 const banners = [
   {
-    img_name:'baby',
-    imt_alt:'baby.png',
+    img_name:'fruits',
+    imt_alt:'Fruits.png',
     heading:' Friuts & vegetables',
     description:'A variety of fresh fruits an vegetables',
     button:'Explore Friuts-and-Veg',
@@ -48,3 +54,5 @@ const banners = [
   },
 ]
 export default banners
+
+export { BannerImages }
