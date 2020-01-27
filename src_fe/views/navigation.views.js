@@ -3,6 +3,7 @@ import Cart from './cart.views'
 import LoginSignup from './signuplogin.views'
 import Logo from 'Assets/images/logo.png'
 import '../styles/navigation.scss'
+import { Link } from 'react-router-dom'
 class Navigation extends React.Component {
   render() {
     return (
@@ -15,12 +16,16 @@ class Navigation extends React.Component {
               </div>
               <div className='navlinks-container'>
                 <ul className='links'>
-                  <li>
-                    Home
-                  </li>
-                  <li>
-                    Products
-                  </li>
+                  <Link to='/'>
+                    <li>
+                      Home
+                    </li>
+                  </Link>
+                  <Link to='/products'>
+                    <li>
+                      Products
+                    </li>
+                  </Link>
                 </ul>
               </div>
               <div className='cart-login-container'>

@@ -3,14 +3,6 @@ import Bakery from 'Assets/images/category/bakery.png'
 import Beauty from 'Assets/images/category/beauty.png'
 import Beverages from 'Assets/images/category/beverages.png'
 import Fruits from 'Assets/images/category/fruits.png'
-const BannerImages =  [
-  {name:'fruits', image:Fruits},
-  {name:'bakery', image:Bakery},
-  {name:'beverages', image: Beverages},
-  {name:'beauty', image:Beauty},
-  {name :'baby', image :Baby},
-]
-
 const banners = [
   {
     img_name:'fruits',
@@ -18,23 +10,28 @@ const banners = [
     heading:' Friuts & vegetables',
     description:'A variety of fresh fruits an vegetables',
     button:'Explore Friuts-and-Veg',
-    link:'products'
+    link:'products',
+    image:Fruits
   },
   {
     img_name:'bakery',
     imt_alt:'bakery.png',
     heading:'Bakery Cakes and Dairy',
-    description:'The best cupcakes,cookies,pies,cheesecakes, fresh bread, biscotti, muffins, bagels, fresh coffee, milk and more.',
+    description:'The best cupcakes, cookies, pies ,cheesecakes, fresh bread, biscotti, muffins, bagels, fresh coffee, milk and more.',
     button:'Explore Bakery-cakes-dairy',
-    link:'products'
+    link:'products',
+    image:Bakery,
+    
   },
   {
     img_name:'beverages',
     imt_alt:'beverages.png',
     heading:'Beverages',
-    description:'Our Beverages Department will ensure that your fridge will always be fully stocked. Shop for soda,juice,beer and more.',
+    description:'Our Beverages Department will ensure that your fridge will always be fully stocked. Shop for soda, juice, beer and more.',
     button:'Explore Beverages',
-    link:'products'
+    link:'products',
+    image: Beverages,
+    
   },
   {
     img_name:'beauty',
@@ -42,7 +39,8 @@ const banners = [
     heading:'Beauty and Hygiene',
     description:'Buy beauty and personal care products online in India at best prices.',
     button:'Explore Beauty and hygiene',
-    link:'products'
+    link:'products',
+    image:Beauty
   },
   {
     img_name:'baby',
@@ -50,9 +48,8 @@ const banners = [
     heading:'Baby Care',
     description:'Shop for baby care products, diapers, skin care products etc.',
     button:'Explore Baby',
-    link:'products'
+    link:'products',
+    image :Baby ,
   },
 ]
 export default banners
-
-export { BannerImages }
