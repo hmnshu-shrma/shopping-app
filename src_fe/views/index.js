@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navigation from './navigation.views'
-import ProductList from './productlist.views'
+import MemonisedProductList from './productlist.views'
 import Banners from './banners.views'
 import Footer from './footer.views'
 import Carousel from './carousel.views'
@@ -15,7 +15,6 @@ class AppContainer extends Component {
     return (
       <React.Fragment>
         <div className='app-container'>
-          
           <Router>
             <Navigation />
             <Switch>
@@ -24,7 +23,7 @@ class AppContainer extends Component {
                 <Banners props='himanshu' />
               </Route>
               <Route path='/products'>
-                <ProductList />
+                <MemonisedProductList />
               </Route>
             </Switch>
           </Router>

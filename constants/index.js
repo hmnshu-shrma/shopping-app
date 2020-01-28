@@ -10,7 +10,7 @@ const banners = [
     heading:' Friuts & vegetables',
     description:'A variety of fresh fruits an vegetables',
     button:'Explore Friuts-and-Veg',
-    link:'products',
+    link:'/products',
     image:Fruits
   },
   {
@@ -19,7 +19,7 @@ const banners = [
     heading:'Bakery Cakes and Dairy',
     description:'The best cupcakes, cookies, pies ,cheesecakes, fresh bread, biscotti, muffins, bagels, fresh coffee, milk and more.',
     button:'Explore Bakery-cakes-dairy',
-    link:'products',
+    link:'/products',
     image:Bakery,
     
   },
@@ -29,7 +29,7 @@ const banners = [
     heading:'Beverages',
     description:'Our Beverages Department will ensure that your fridge will always be fully stocked. Shop for soda, juice, beer and more.',
     button:'Explore Beverages',
-    link:'products',
+    link:'/products',
     image: Beverages,
     
   },
@@ -39,7 +39,7 @@ const banners = [
     heading:'Beauty and Hygiene',
     description:'Buy beauty and personal care products online in India at best prices.',
     button:'Explore Beauty and hygiene',
-    link:'products',
+    link:'/products',
     image:Beauty
   },
   {
@@ -48,7 +48,7 @@ const banners = [
     heading:'Baby Care',
     description:'Shop for baby care products, diapers, skin care products etc.',
     button:'Explore Baby',
-    link:'products',
+    link:'/products',
     image :Baby ,
   },
 ]

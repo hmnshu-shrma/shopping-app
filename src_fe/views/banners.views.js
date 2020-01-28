@@ -3,6 +3,7 @@ import BannersConst from 'Constants/'
 import { uuid } from 'uuidv4'
 import 'Styles/banner.scss'
 import { Link } from 'react-router-dom'
+
 // import path from 'path'
 const Banners = (props) => {
   const bannersComponent = BannersConst.map((banner ,id) => {
