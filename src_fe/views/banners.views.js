@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 
 // import path from 'path'
 const Banners = (props) => {
-  const bannersComponent = BannersConst.map((banner ,id) => {
+  debugger
+  const bannersComponent = BannersConst.map((banner, id) => {
     const {
       imt_alt: imageAlt,
       image,
@@ -16,32 +17,25 @@ const Banners = (props) => {
       link
     } = banner
     return (
-      <div className='banner-component' key={uuid()} >
-        <div className='image-container'>
-          <img src={image} key={uuid()} alt={imageAlt} className='banner-image' />
+      <div className='banner-component'
+        key={uuid()} >
+        <div className='image-container' >
+          <img src={image}
+            key={uuid()}
+            alt={imageAlt}
+            className='banner-image' />
         </div>
-        <div className='content'>
-          <p className='heading'>
-            {heading}
-          </p>
-          <p className='desc'>
-            {description}
-          </p>
-          <Link to={link}>
-            <button className='link-button'>
-              {button}
-            </button>
+        <div className='content' >
+          <p className='heading' > { heading } </p>
+          <p className='desc' > { description } </p>
+          <Link to={link} >
+            <button className='link-button' > { button } </button>
           </Link>
         </div>
       </div>
     )
   })
-  return (
-    <React.Fragment>
-      
-      {bannersComponent}
-    </React.Fragment>
-  )
+  return bannersComponent
 }
 
 export default Banners

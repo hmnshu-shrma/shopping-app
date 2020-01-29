@@ -1,0 +1,27 @@
+@import 'colors';
+.product{
+  font-family: $font-family-dosis;
+  &-cards{
+    width:23%;
+    margin:5px;
+    padding:15px;
+    border:1px solid rgba(0, 0, 0, 0.12156862745098039);
+    border-radius:2px;
+  }
+  &-name{
+    font-size: 17px;
+    font-weight: 800;
+    margin: 5px 0px;
+  }
+  &-price{
+    
+  }
+  &-desc{
+    background: rgba(152, 152, 152, 0.14901960784313725);
+    font-size: 12px;
+    padding: 10px;
+  }
+  &-img{
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navigation from './navigation.views'
-import MemonisedProductList from './productlist.views'
+import MemonisedProductList from './product-page.views'
 import Banners from './banners.views'
 import Footer from './footer.views'
 import Carousel from './carousel.views'

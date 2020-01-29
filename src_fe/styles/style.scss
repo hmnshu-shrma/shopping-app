@@ -24,3 +24,12 @@ body{
     font-family: 12px;
   }
 }
+.btn-cta{
+  background: $tertiaryCTA;
+  font-family: $font-family-dosis;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 17px;
+}

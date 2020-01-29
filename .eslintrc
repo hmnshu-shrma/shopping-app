@@ -1,20 +1,23 @@
 {
-  'parser': 'babel-eslint',
-   'extends': ['standard', 'standard-jsx', 'prettier'],
-  'env': {
-    'browser': true,
-    'node': true
+'parser': 'babel-eslint',
+'extends': ['standard', 'standard-jsx', 'prettier'],
+'env': {
+  'browser': true,
+  'node': true
   },
   'settings': {
     'react': {
       'version': 'detect'
     }
-  },
-'parserOptions': {
-    'sourceType': 'module',
-    'ecmaVersion': 2018
-  },
-  'rules': {
+    },
+    'parserOptions': {
+      'ecmaVersion': 6,
+      'sourceType': 'module',
+      'ecmaFeatures': {
+        'jsx': true
+      }
+      },
+      'rules': {
         'semi': 'error',
         'eqeqeq': ['error', 'smart'],
         'no-debugger': 'off',
@@ -23,7 +26,10 @@
         'camelcase': ['error', {'ignoreDestructuring': true , 'properties': 'never' }],
         'no-console': ['warn', { allow: ['warn'] }],
         'no-multi-spaces': 'error',
-        'max-len': ['error', { 'code': 150 }],
-
+        'max-len': ['error', { 'code': 200 }],
+        'indent': ['off'],
+        'react/jsx-indent': ['warn', 2]
+      }
     }
-}
+    
+    
