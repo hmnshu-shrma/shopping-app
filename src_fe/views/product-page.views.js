@@ -65,9 +65,9 @@ class ProductList extends React.Component {
           </div>
           <div className='product-list'>
             <MemonisedProductCard products={products} />
+          </div>
         </div>
-      </div>
-    </React.Fragment>
+      </React.Fragment>
   )
 }
 }

@@ -4,6 +4,7 @@ import MemonisedProductList from './product-page.views'
 import Banners from './banners.views'
 import Footer from './footer.views'
 import Carousel from './carousel.views'
+import LoginSignupView from './login-signup.views'
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,13 +26,17 @@ class AppContainer extends Component {
               <Route path='/products'>
                 <MemonisedProductList />
               </Route>
+              <Route path='/login'>
+                <LoginSignupView />
+              </Route>
+
             </Switch>
           </Router>
           <Footer />
         </div>
       </React.Fragment>
-    )
-  }
+)
+}
 }
 
 export default AppContainer

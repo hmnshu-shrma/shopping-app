@@ -1,6 +1,6 @@
 import React from 'react'
 import Cart from './cart.views'
-import LoginSignup from './signuplogin.views'
+import LoginSignupLinks from './signuplogin-links.views'
 // import Logo from 'Assets/images/logo.png'
 import '../styles/navigation.scss'
 import { Link } from 'react-router-dom'
@@ -18,26 +18,24 @@ class Navigation extends React.Component {
                 <ul className='links'>
                   <Link to='/'>
                     <li>
-                      Home
+                  Home
                     </li>
                   </Link>
                   <Link to='/products'>
                     <li>
-                      Products
+                Products
                     </li>
                   </Link>
                 </ul>
               </div>
               <div className='cart-login-container'>
-                <LoginSignup />
+                <LoginSignupLinks />
                 <Cart />
               </div>
             </div>
           </nav>
         </header>
-      </React.Fragment>
-    )
-  }
+      </React.Fragment>)}
 }
 
 export default Navigation

@@ -4,6 +4,10 @@ import { uuid } from 'uuidv4'
 import productimages from 'Constants/productimages'
 const ProductCard = (props) => {
   const { products } = props
+  const addToCart = ( event ,args) => {
+    event.preventDefault()
+    console.log(args)
+  }
   return (
     <React.Fragment>
       {
@@ -20,12 +24,14 @@ const ProductCard = (props) => {
               <p className='product-desc'>
                 {description}
               </p>
-              <span className='product-price'>
-                MRP Rs.{price}
-              </span>
-              <button onclick={id} className='btn-cta'>
-                Buy Now
-              </button>
+              <div className='product-cta-container'>
+                <p className='product-price'>
+                  MRP Rs.{price}
+                </p>
+                <button onClick={e => addToCart(e,id)} className='btn-cta'>
+                  Buy Now
+                </button>
+              </div>
             </div>
           )
         }
